@@ -7,12 +7,8 @@ import AppUser from '../models/user';
 passport.serializeUser(function(user , done) {
   console.log('session에 저장')
   done(null, user._id); 
-  // =>session에 저장(req.session.passport.user = {_id :...}) 
-  // _효율적으로 id 만 저장하기. //한번만 작동. 
-  // password : 보안문제도 있음. 
 });
 
-//deserialize// : session에서 불러와서 사용. -> req.user에 저장. 
 passport.deserializeUser((id, done)=>{ 
   AppUser.findById(id, (err, user) => {
      done(null, user)
