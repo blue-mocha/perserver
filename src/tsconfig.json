@@ -16,7 +16,6 @@
     "noImplicitAny": true,
     "isolatedModules": true,
   
-    
     //module 
     //baseUrl 설정. 
     "target": "es6", 
@@ -27,12 +26,6 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
         
-    
-    //interop 상호운용 
-
-
-
-
     //js support 
     "allowJs": true,
 
