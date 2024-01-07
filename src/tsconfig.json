@@ -1,0 +1,57 @@
+{ 
+   //(webpack)ts-loader or tsc에서 참고. 
+  "compilerOptions": {
+    
+    //Emit 
+    //"outFile": "./"//단일 파일로 합쳐서 출력합니다. */(tsc)
+    "outDir": "./dist",
+    "declaration": false, //d.ts 파일 생성 여부.
+    "sourceMap": true, // 웹팩사용시 추가해야됨. (ts해석하고 참고하는데 필요). 
+    "removeComments": true, //주석 지우기 
+    "noEmit": false,
+
+    //type check  
+    "strict": true, //stric 관련 모두 설정. 
+    "noFallthroughCasesInSwitch": true,   
+    "noImplicitAny": true,
+    "isolatedModules": true,
+  
+    
+    //module 
+    //baseUrl 설정. 
+    "target": "es6", 
+    "module": "es2015", //브라우저에서 사용될. 
+    "resolveJsonModule": true, //json 파일 모듈도 사용.
+    "moduleResolution": "node",
+    "esModuleInterop": true, //const/import 트랜스 파일링 
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+        
+    
+    //interop 상호운용 
+
+
+
+
+    //js support 
+    "allowJs": true,
+
+    //completeness 
+    "skipLibCheck": false, //모듈 lib 체크. 
+   
+    //Language and Environment
+    "jsx": "react-jsx",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+
+    
+
+    
+   
+  },
+  "include": ["src"], //"./src/**/*"
+  "exclude": ["node_modules"]
+  }
